@@ -1,5 +1,6 @@
 package com.example.barbeariadomarquinho.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -33,6 +34,13 @@ class Home : AppCompatActivity() {
         recyclerViewServicos.setHasFixedSize(true)
         recyclerViewServicos.adapter = servicosAdapter
         getServicos()
+
+        binding.btnAgendar.setOnClickListener{
+            val intent = Intent(this, Agendamento :: class.java)
+            intent.putExtra("nome",nome)
+            startActivity(intent)
+        }
+
 
     }
 
