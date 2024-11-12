@@ -14,6 +14,7 @@ import com.example.barbeariadomarquinho.R
 import com.example.barbeariadomarquinho.databinding.ActivityAgendamentoBinding
 import com.example.barbeariadomarquinho.databinding.ServicosItemBinding
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.firestore.FirebaseFirestore
 
 class Agendamento : AppCompatActivity() {
 
@@ -88,14 +89,14 @@ class Agendamento : AppCompatActivity() {
                     mensagem(it,"Coloque uma data!", "#FF0000")
                 }
                 barbeiro1.isChecked && data.isNotEmpty() && hora.isNotEmpty() ->{
-                    mensagem(it,"Agendamento realizado com sucesso!", "#FF03DAC5")
+                    salvarAgendamento(it,nome,"Pedro da Silva", data,hora)
                 }
                 barbeiro2.isChecked && data.isNotEmpty() && hora.isNotEmpty() ->{
-                    mensagem(it,"Agendamento realizado com sucesso!", "#FF03DAC5")
+                    salvarAgendamento(it,nome,"Marco Santos", data,hora)
 
                 }
                 barbeiro3.isChecked && data.isNotEmpty() && hora.isNotEmpty() ->{
-                    mensagem(it,"Agendamento realizado com sucesso!", "#FF03DAC5")
+                    salvarAgendamento(it,nome,"Cleber Gomes", data,hora)
                 }
                 else ->{
                     mensagem(it,"Escolha um barbeiro!", "#FF0000")
@@ -110,4 +111,22 @@ class Agendamento : AppCompatActivity() {
         snackbar.setTextColor(Color.parseColor("#FFFFFF"))
         snackbar.show()
     }
+    private fun salvarAgendamento(view:View,cliente: String, barbeiro:String,data:String,hora:String){
+
+        val dp = FirebaseFirestore.getInstance()
+
+        val dadosUsuario = hashMapOf(
+            "cliente" to cliente,
+            "barbeiro" to barbeiro,
+            "data" to data,
+            "hora" to hora
+        )
+
+        dp.collection("agendamento").document(cliente).set(dadosUsuario).addOnCompleteListener{
+            mensagem(view,"Agendamento realizado com sucesso!","#FF03DAC5")
+        }.addOnFailureListener{
+            mensagem(view,"Erro no servidor!","#FF0000")
+        }
+    }
+
 }
