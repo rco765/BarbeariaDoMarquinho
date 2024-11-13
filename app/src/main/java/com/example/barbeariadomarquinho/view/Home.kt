@@ -44,6 +44,8 @@ class Home : AppCompatActivity() {
 
     }
 
+
+
     private fun getServicos(){
 
         val servico1 = Servicos(R.drawable.img1, "Corte de Cabelo")

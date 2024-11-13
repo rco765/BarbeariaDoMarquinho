@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Barbearia do Marquinho"
-            android:textSize="36sp"
+            android:textSize="28sp"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:gravity="center"

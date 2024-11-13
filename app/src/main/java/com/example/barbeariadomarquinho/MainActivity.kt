@@ -1,14 +1,11 @@
 package com.example.barbeariadomarquinho
 
-import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.barbeariadomarquinho.databinding.ActivityMainBinding
 import com.example.barbeariadomarquinho.view.Home
 import com.google.android.material.snackbar.Snackbar
