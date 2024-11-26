@@ -2,10 +2,7 @@ package com.example.barbeariadomarquinho.view
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.barbeariadomarquinho.R
 import com.example.barbeariadomarquinho.adapter.ServicosAdapter
@@ -54,10 +51,10 @@ class Home : AppCompatActivity() {
         val servico2 = Servicos(R.drawable.img2, "Corte de Barba")
         listaServicos.add(servico2)
 
-        val servico3 = Servicos(R.drawable.img3, "Sobrancelha")
+        val servico3 = Servicos(R.drawable.img3, "Lavagem de cabelo")
         listaServicos.add(servico3)
 
-        val servico4 = Servicos(R.drawable.img4, "Luzes")
+        val servico4 = Servicos(R.drawable.img4, "Tratamento capilar")
         listaServicos.add(servico4)
 
 

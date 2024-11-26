@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "38361387831",
+    "project_id": "barberaria-do-marquinho",
+    "storage_bucket": "barberaria-do-marquinho.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:38361387831:android:5c77be6f37a4f1532500b2",
+        "android_client_info": {
+          "package_name": "com.example.barbeariadomarquinho"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs6c5CBUJaed-iFjzbEp09jhRtjFvZ0YY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
